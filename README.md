@@ -2,6 +2,7 @@
 
 Este repositório contém a versão portuguesa do manual usado no curso Diploma Bitcoin.
 
+- **Coordenação**: André Loja
 - **Tradução**: Diogo Garcia
 - **Revisão**: Charlie Gonçalves, Henrique Albuquerque, Inês Louro, Luísa Costa, Mafalda Brazão
 - **Paginação**: Carolina Roovers
