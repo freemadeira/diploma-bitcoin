@@ -11,7 +11,6 @@ assignees: ""
 - [ ] Gralha no texto
 - [x] Formatação
 - [ ] Erro técnico
-- [ ] Tradução
 - [ ] Outro
 
 **Versão**
