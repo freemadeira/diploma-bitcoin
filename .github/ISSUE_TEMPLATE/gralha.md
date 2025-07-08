@@ -1,8 +1,8 @@
 ---
 name: Gralha no texto
 about: Reporta um erro para nos ajudar a melhorar o manual
-title: '[GRALHA] '
-labels: bug
+title: "[GRALHA] "
+labels: gralha
 assignees: ''
 
 ---
