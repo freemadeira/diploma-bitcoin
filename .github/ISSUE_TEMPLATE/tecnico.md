@@ -1,16 +1,16 @@
 ---
-name: Gralha no texto
-about: Reporta um erro para nos ajudar a melhorar o manual
-title: "[GRALHA] "
-labels: gralha
+name: Erro técnico
+about: Algo está mal explicado ou incorreto
+title: "[TÉCNICO] "
+labels: technical
 assignees: ""
 ---
 
 **Tipo de erro**
 
-- [x] Gralha no texto
+- [ ] Gralha no texto
 - [ ] Formatação
-- [ ] Erro técnico
+- [x] Erro técnico
 - [ ] Outro
 
 **Versão**
@@ -25,7 +25,7 @@ A versão (ano) do manual. Esta informação está na capa.
 
 > Copia o texto onde se encontra o problema.
 
-**Descrição (opcional)**
+**Descrição**
 Breve explicação ou comentário que ajude a entender o problema.
 
 **Sugestão de correção (opcional)**
