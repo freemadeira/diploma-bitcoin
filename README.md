@@ -24,6 +24,6 @@ Também podes consultar as [questões em aberto](https://github.com/freemadeira/
 
 Todas as contribuições — grandes ou pequenas — são bem-vindas!
 
-##Licença
+## Licença
 
 Este material está licenciado sob a [CC BY-SA 4.0](LICENSE.md)
