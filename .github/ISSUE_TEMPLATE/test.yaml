@@ -1,7 +1,7 @@
 ---
 name: Erro de formatação test
 description: Algo está fora do lugar
-title: "[FORMATAÇÃO] "
+title: ""
 
 labels:
   - formatting
@@ -10,28 +10,15 @@ labels:
 assignees: []
 
 body:
-  - type: checkboxes
-    id: tipo-erro
-    attributes:
-      label: Tipo de erro
-      options:
-        - label: Gralha no texto
-        - label: Formatação
-          required: false
-        - label: Erro técnico
-        - label: Outro
-    validations:
-      required: true
   - type: input
-    id: versao
+    id: version
     attributes:
       label: Versão
-      description: A versão (ano) do manual pode ser encontrada na capa
-      placeholder: "Ex: 2024"
+      description: "A versão do manual pode ser encontrada na capa — ex: 2025"
     validations:
       required: true
   - type: input
-    id: capitulo
+    id: chapter
     attributes:
       label: Capítulo
     validations:
@@ -46,20 +33,14 @@ body:
     id: descricao
     attributes:
       label: Descrição
-      description: Breve explicação ou comentário que ajude a localizar e entender o problema
+      description: Breve explicação ou comentário que ajude a localizar e entender o problema. Também
+        podes adicionar capturas de ecrã
     validations:
       required: true
   - type: textarea
     id: sugestao
     attributes:
-      label: Sugestão de correção (opcional)
-      description: Conteúdo depois de corrigido
-    validations:
-      required: false
-  - type: textarea
-    id: capturas
-    attributes:
-      label: Capturas de ecrã (opcional)
-      description: Adiciona uma captura de ecrã para ilustrar o problema
+      label: Sugestão de correção
+      description: Conteúdo depois de corrigido (opcional)
     validations:
       required: false
