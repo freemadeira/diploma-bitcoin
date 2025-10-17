@@ -1,11 +1,13 @@
 ---
 name: Erro de formatação test
 description: Algo está fora do lugar
-about: Suggest a new feature or improvement
 
 labels:
   - formatting
   - triage
+
+projects:
+  - freemadeira/1
 
 assignees: []
 
