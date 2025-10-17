@@ -9,6 +9,23 @@ labels:
 assignees: []
 
 body:
+  - type: markdown
+    attributes:
+      value: "## Thank you for contributing to our project!"
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report.
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: "A versão do manual pode ser encontrada na capa — ex: 2025"
+      options:
+        - 2025
+      default: 0
+    validations:
+      required: true
   - type: input
     id: version
     attributes:
