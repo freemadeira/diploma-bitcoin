@@ -1,6 +1,7 @@
 ---
 name: Erro de formatação test
 description: Algo está fora do lugar
+about: Suggest a new feature or improvement
 
 labels:
   - formatting
@@ -16,6 +17,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report.
+        Another line
   - type: dropdown
     id: version
     attributes:
