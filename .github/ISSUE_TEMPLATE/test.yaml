@@ -23,14 +23,15 @@ body:
     validations:
       required: true
   - type: input
-    id: version
+    id: versao
     attributes:
       label: Versão
-      description: "A versão do manual pode ser encontrada na capa — ex: 2025"
+      description: A versão (ano) do manual pode ser encontrada na capa
+      placeholder: "Ex: 2024"
     validations:
       required: true
   - type: input
-    id: chapter
+    id: capitulo
     attributes:
       label: Capítulo
     validations:
@@ -45,14 +46,20 @@ body:
     id: descricao
     attributes:
       label: Descrição
-      description: Breve explicação ou comentário que ajude a localizar e entender o problema. Também
-        podes adicionar capturas de ecrã
+      description: Breve explicação ou comentário que ajude a localizar e entender o problema
     validations:
       required: true
   - type: textarea
     id: sugestao
     attributes:
-      label: Sugestão de correção
-      description: Conteúdo depois de corrigido (opcional)
+      label: Sugestão de correção (opcional)
+      description: Conteúdo depois de corrigido
+    validations:
+      required: false
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas de ecrã (opcional)
+      description: Adiciona uma captura de ecrã para ilustrar o problema
     validations:
       required: false
