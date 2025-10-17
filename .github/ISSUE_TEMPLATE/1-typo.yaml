@@ -42,7 +42,7 @@ body:
       label: Texto original
       description: Copia o texto onde se encontra o problema
       value: |
-        >
+        "> "
     validations:
       required: true
   - type: textarea
