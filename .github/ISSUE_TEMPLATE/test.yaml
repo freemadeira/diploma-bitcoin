@@ -10,6 +10,18 @@ labels:
 assignees: []
 
 body:
+  - type: checkboxes
+    id: tipo-erro
+    attributes:
+      label: Tipo de erro
+      options:
+        - label: Gralha no texto
+        - label: Formatação
+          required: false
+        - label: Erro técnico
+        - label: Outro
+    validations:
+      required: true
   - type: input
     id: version
     attributes:
