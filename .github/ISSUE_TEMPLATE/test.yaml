@@ -27,7 +27,7 @@ body:
     validations:
       required: true
   - type: input
-    id: version
+    id: versao
     attributes:
       label: Versão
       description: "A versão do manual pode ser encontrada na capa — ex: 2025"
