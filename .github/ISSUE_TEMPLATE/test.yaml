@@ -1,0 +1,65 @@
+---
+name: Erro de formatação test
+description: Algo está fora do lugar
+title: "[FORMATAÇÃO] "
+
+labels:
+  - formatting
+  - triage
+
+assignees: []
+
+body:
+  - type: checkboxes
+    id: tipo-erro
+    attributes:
+      label: Tipo de erro
+      options:
+        - label: Gralha no texto
+        - label: Formatação
+          required: false
+        - label: Erro técnico
+        - label: Outro
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão
+      description: A versão (ano) do manual pode ser encontrada na capa
+      placeholder: "Ex: 2024"
+    validations:
+      required: true
+  - type: input
+    id: capitulo
+    attributes:
+      label: Capítulo
+    validations:
+      required: true
+  - type: input
+    id: pagina
+    attributes:
+      label: Página
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: Breve explicação ou comentário que ajude a localizar e entender o problema
+    validations:
+      required: true
+  - type: textarea
+    id: sugestao
+    attributes:
+      label: Sugestão de correção (opcional)
+      description: Conteúdo depois de corrigido
+    validations:
+      required: false
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas de ecrã (opcional)
+      description: Adiciona uma captura de ecrã para ilustrar o problema
+    validations:
+      required: false
