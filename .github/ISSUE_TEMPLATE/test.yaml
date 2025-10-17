@@ -6,20 +6,14 @@ labels:
   - formatting
   - triage
 
-projects:
-  - "freemadeira/1"
-
-assignees: []
-
 body:
   - type: markdown
     attributes:
-      value: "## Thank you for contributing to our project!"
+      value: "## Obrigado por contribuíres!"
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report.
-        Another line
+        Agradecemos o tempo dedicado para melhorar este manual. Por favor preenche os campos abaixo para podermos encontrar e resolver o problema.
   - type: dropdown
     id: version
     attributes:
