@@ -5,6 +5,7 @@ description: Algo está mal explicado ou incorreto
 labels:
   - technical
   - triage
+  - report upstream
 
 body:
   - type: markdown
