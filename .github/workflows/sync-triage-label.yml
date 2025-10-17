@@ -1,0 +1,88 @@
+---
+name: Sync Triage Label with Project Status
+
+on:
+  schedule:
+    # Runs every 15 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |-
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            // Get all open issues
+            const issues = await github.rest.issues.listForRepo({
+              owner: owner,
+              repo: repo,
+              state: 'open',
+              per_page: 100
+            });
+            console.log(`Found ${issues.data.length} open issues`);
+            for (const issue of issues.data) {
+              if (issue.pull_request) continue; // Skip PRs
+              try {
+                // Get project status for this issue using GraphQL
+                const query = `
+                  query($owner: String!, $repo: String!, $issueNumber: Int!) {
+                    repository(owner: $owner, name: $repo) {
+                      issue(number: $issueNumber) {
+                        projectItems(first: 10) {
+                          nodes {
+                            fieldValueByName(name: "Status") {
+                              ... on ProjectV2ItemFieldSingleSelectValue {
+                                name
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                `;
+                const variables = {
+                  owner: owner,
+                  repo: repo,
+                  issueNumber: issue.number
+                };
+                const result = await github.graphql(query, variables);
+                const projectItems = result.repository.issue.projectItems.nodes;
+                // Check if any project item has "Triage" status
+                const hasTriageStatus = projectItems.some(item => 
+                  item.fieldValueByName?.name === "Triage"
+                );
+                // Check if issue has triage label
+                const hasTriageLabel = issue.labels.some(label => 
+                  label.name === "triage"
+                );
+                // Sync label with status
+                if (hasTriageStatus && !hasTriageLabel) {
+                  // Add triage label
+                  await github.rest.issues.addLabels({
+                    owner: owner,
+                    repo: repo,
+                    issue_number: issue.number,
+                    labels: ["triage"]
+                  });
+                  console.log(`Issue  #${issue.number}: Added triage label`);
+                } else if (!hasTriageStatus && hasTriageLabel) {
+                  // Remove triage label
+                  await github.rest.issues.removeLabel({
+                    owner: owner,
+                    repo: repo,
+                    issue_number: issue.number,
+                    name: "triage"
+                  });
+                  console.log(`Issue  #${issue.number}: Removed triage label`);
+                }
+              } catch (error) {
+                console.log(`Error processing issue  #${issue.number}: ${error.message}`);
+              }
+            }
+            console.log('Sync completed');
