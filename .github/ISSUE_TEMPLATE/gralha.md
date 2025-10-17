@@ -2,7 +2,7 @@
 name: Gralha no texto
 about: Reporta um erro para nos ajudar a melhorar o manual
 title: "[GRALHA] "
-labels: gralha
+labels: gralha, triage
 assignees: ""
 ---
 
