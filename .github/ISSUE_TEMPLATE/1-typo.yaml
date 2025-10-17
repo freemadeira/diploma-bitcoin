@@ -42,8 +42,7 @@ body:
       label: Texto original
       description: Copia o texto onde se encontra o problema
       value: |
-        > [Cola aqui o texto]
-        > [Podes usar várias linhas]
+        >
     validations:
       required: true
   - type: textarea
@@ -59,5 +58,7 @@ body:
     attributes:
       label: Sugestão de correção
       description: Conteúdo depois de corrigido (opcional)
+      value: |
+        >
     validations:
       required: false
