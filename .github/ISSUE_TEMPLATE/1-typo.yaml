@@ -1,0 +1,53 @@
+---
+name: Gralha no texto
+description: Erros tipográficos, ortográficos ou de sintaxe
+
+labels:
+  - typo
+  - triage
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Obrigado por contribuíres!"
+  - type: markdown
+    attributes:
+      value: |
+        Agradecemos o tempo dedicado para melhorar este manual. Por favor preenche os campos abaixo para podermos encontrar e resolver o problema.
+  - type: dropdown
+    id: version
+    attributes:
+      label: Versão
+      description: "A versão do manual pode ser encontrada na capa"
+      options:
+        - 2025
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: chapter
+    attributes:
+      label: Capítulo
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Página
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição
+      description: Breve explicação ou comentário que ajude a localizar e entender o problema. Também
+        podes adicionar capturas de ecrã
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Sugestão de correção
+      description: Conteúdo depois de corrigido (opcional)
+    validations:
+      required: false
