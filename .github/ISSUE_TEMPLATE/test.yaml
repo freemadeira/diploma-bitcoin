@@ -7,8 +7,8 @@ labels:
   - triage
 
 projects:
-  - freemadeira/1
-
+  - "freemadeira/diploma-bitcoin/1"
+  
 assignees: []
 
 body:
