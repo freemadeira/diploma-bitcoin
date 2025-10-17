@@ -37,17 +37,28 @@ body:
     validations:
       required: true
   - type: textarea
+    id: original
+    attributes:
+      label: Texto original
+      description: Copia o texto onde se encontra o problema
+      value: |
+        >
+    validations:
+      required: true
+  - type: textarea
     id: description
     attributes:
       label: Descrição
       description: Breve explicação ou comentário que ajude a localizar e entender o problema. Também
-        podes adicionar capturas de ecrã
+        podes adicionar capturas de ecrã (opcional)
     validations:
-      required: true
+      required: false
   - type: textarea
     id: suggestion
     attributes:
       label: Sugestão de correção
       description: Conteúdo depois de corrigido (opcional)
+      value: |
+        >
     validations:
       required: false
