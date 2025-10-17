@@ -13,8 +13,8 @@ body:
       value: "## Obrigado por contribuíres!"
   - type: markdown
     attributes:
-      value: |
-        Agradecemos o tempo dedicado para melhorar este manual. Por favor preenche os campos abaixo para podermos encontrar e resolver o problema.
+      value: Agradecemos o tempo dedicado para melhorar este manual. Por favor preenche os campos abaixo
+        para podermos encontrar e resolver o problema.
   - type: dropdown
     id: version
     attributes:
@@ -42,8 +42,7 @@ body:
     attributes:
       label: Texto original
       description: Copia o texto onde se encontra o problema
-      value: |
-        >
+      value: "> "
     validations:
       required: true
   - type: textarea
@@ -59,7 +58,6 @@ body:
     attributes:
       label: Sugestão de correção
       description: Conteúdo depois de corrigido (opcional)
-      value: |
-        >
+      value: "> "
     validations:
       required: false

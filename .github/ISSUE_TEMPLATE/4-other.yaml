@@ -12,8 +12,8 @@ body:
       value: "## Obrigado por contribuíres!"
   - type: markdown
     attributes:
-      value: |
-        Agradecemos o tempo dedicado para melhorar este manual. Por favor preenche os campos abaixo para podermos encontrar e resolver o problema.
+      value: Agradecemos o tempo dedicado para melhorar este manual. Por favor preenche os campos abaixo
+        para podermos encontrar e resolver o problema.
   - type: dropdown
     id: version
     attributes:
