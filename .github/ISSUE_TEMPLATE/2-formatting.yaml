@@ -1,5 +1,5 @@
 ---
-name: Erro de formatação test
+name: Formatação
 description: Algo está fora do lugar
 
 labels:
@@ -17,7 +17,7 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: Version
+      label: Versão
       description: "A versão do manual pode ser encontrada na capa"
       options:
         - 2025
