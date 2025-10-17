@@ -18,17 +18,10 @@ body:
     id: version
     attributes:
       label: Version
-      description: "A versão do manual pode ser encontrada na capa — ex: 2025"
+      description: "A versão do manual pode ser encontrada na capa"
       options:
         - 2025
       default: 0
-    validations:
-      required: true
-  - type: input
-    id: versao
-    attributes:
-      label: Versão
-      description: "A versão do manual pode ser encontrada na capa — ex: 2025"
     validations:
       required: true
   - type: input
@@ -38,13 +31,13 @@ body:
     validations:
       required: true
   - type: input
-    id: pagina
+    id: page
     attributes:
       label: Página
     validations:
       required: true
   - type: textarea
-    id: descricao
+    id: description
     attributes:
       label: Descrição
       description: Breve explicação ou comentário que ajude a localizar e entender o problema. Também
@@ -52,7 +45,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: sugestao
+    id: suggestion
     attributes:
       label: Sugestão de correção
       description: Conteúdo depois de corrigido (opcional)
