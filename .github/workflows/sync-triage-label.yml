@@ -3,7 +3,7 @@ name: Sync Triage Label with Project Status
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:
